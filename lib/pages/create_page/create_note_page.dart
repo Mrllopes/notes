@@ -66,10 +66,15 @@ class _CreateNotePageState extends State<CreateNotePage> {
                 children: [
                   Expanded(
                     child: Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 16.0),
+                      padding: const EdgeInsets.symmetric(
+                        horizontal: 16.0,
+                      ),
                       child: ElevatedButton(
                         onPressed: () {
-                          Navigator.pop(context, description);
+                          Navigator.pop(
+                            context,
+                            description,
+                          );
                         },
                         child: Text('salvar'),
                       ),
