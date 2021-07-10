@@ -71,14 +71,23 @@ class _HomePageState extends State<HomePage> {
           onTap: navigateToCreateNotePage,
         ),
       ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {
-          navigateToCreateNotePage(
-            action: ActionTypes.create,
-          );
-        },
-        child: Icon(Icons.add),
+      floatingActionButton: Container(
+        width: double.maxFinite,
+        child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 8.0),
+          child: ElevatedButton(
+            onPressed: () {
+              navigateToCreateNotePage(
+                action: ActionTypes.create,
+              );
+            },
+            child: Container(
+              child: Text('NOVA NOTA'),
+            ),
+          ),
+        ),
       ),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
     );
   }
 }
